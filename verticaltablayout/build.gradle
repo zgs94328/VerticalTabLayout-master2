@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
-
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.zgs94328'  //注意com.github.后面的为github账号
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.0'
@@ -22,14 +23,7 @@ android {
     }
 }
 
-publish {
-    userOrg = 'qstumn'
-    groupId = 'q.rorbin'
-    artifactId = 'VerticalTabLayout'
-    publishVersion = '1.2.3'
-    desc = 'This is a vertical direction TabLayout'
-    website = 'https://github.com/qstumn/VerticalTabLayout'
-}
+
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -37,4 +31,5 @@ dependencies {
     provided 'com.android.support:support-v4:25.3.0'
     compile 'q.rorbin:badgeview:1.1.2'
 }
+
 
